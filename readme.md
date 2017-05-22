@@ -7,14 +7,14 @@
 - multiple numbers for the same rule shall only print the string once
 - multiple rules matching shall print each string in order from the lowest matching number to the highest
 - a backwards range like `10,1` is allowed and indicates that iteration should be done in decreasing order
-- a blank program is a shortcut for the canonical fizzbuzz:
+- a blank program is shorthand for the canonical fizzbuzz:
 ```
 3:fizz
 5:buzz
 1,100
 ```
 
-- a program consisting of just the range `R` is a shortcut for:
+- a program consisting of just the range `R` is shorthand for:
 ```
 3:fizz
 5:buzz
@@ -22,14 +22,17 @@ R
 ```
 
 - a range with just one number is assumed to start from 1
+- rules producing the same string are allowed
+- overlapping rules (rules with the same modulus) are allowed, they shall be printed in the order that they occure in the source code
 
-example:
+## Examples
+- program:
 ```
 2,4:hello
 3:world
 13
 ```
-=>
+output:
 ```
 1
 hello
@@ -46,14 +49,14 @@ worldhello
 13
 ```
 
-example:
+- program:
 ```
 1:_
 2:.
 3:,
 6,0
 ```
-=>
+output:
 ```
 _.,
 _
@@ -63,4 +66,35 @@ _.
 _
 _.,
 ```
+
+- program:
+```
+1:🙃
+2:🙃
+4
+```
+output:
+```
+🙃
+🙃🙃
+🙃
+🙃🙃
+```
+
+- program:
+```
+3,4:over
+2,3:lap
+2,6
+```
+output:
+```
+lap
+overlap
+lapover
+5
+over
+```
+
 <!-- step size? -->
+
