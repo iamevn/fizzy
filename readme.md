@@ -24,6 +24,7 @@ R
 - a range with just one number is assumed to start from 1
 - rules producing the same string are allowed
 - overlapping rules (rules with the same modulus) are allowed, they shall be printed in the order that they occure in the source code
+- any line starting with `#` is a comment
 
 ## Examples
 - program:
@@ -95,6 +96,3 @@ lapover
 5
 over
 ```
-
-<!-- step size? -->
-
