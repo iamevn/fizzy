@@ -1,0 +1,23 @@
+Program:
+    (rules+=Rule | Comment)* range=Range? Comment*
+;
+
+Rule:
+    triggers=Triggers ':' string=/.*$/
+;
+
+Trigger:
+    trigger=INT
+;
+
+Triggers:
+    ( triggers=Trigger ',' )* triggers=Trigger
+;
+
+Range:
+    ( range=INT ',' )? range=INT
+;
+
+Comment:
+    /#.*$/
+;
