@@ -96,3 +96,7 @@ lapover
 5
 lapover
 ```
+## Interpreter
+The Python interpreter depends on [textX](http://www.igordejanovic.net/textX/) which should run on Python 2.7+ or 3.3+ and is available through pip: `$ pip install textX`
+
+The terrible test framework I threw together requires Python 3.5+ but the tester itself is there for my own convenience and is unnecessary to actually run Fizzy programs.
