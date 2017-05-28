@@ -1,21 +1,9 @@
 Program:
-    (rules+=Rule | Comment)* range=Range? Comment*
+    ((( rules+=Rule ) | Comment )* (( range+=INT ',' )? range+=INT )? Comment* ) | ""
 ;
 
 Rule:
-    triggers=Triggers ':' string=/.*$/
-;
-
-Trigger:
-    trigger=INT
-;
-
-Triggers:
-    ( triggers=Trigger ',' )* triggers=Trigger
-;
-
-Range:
-    ( range=INT ',' )? range=INT
+    ( triggers=INT ',' )* triggers=INT ':' string=/.*$/
 ;
 
 Comment:
